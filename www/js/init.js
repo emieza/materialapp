@@ -5,6 +5,12 @@
     $('.sidenav').sidenav();
 	$('.tabs').tabs({"swipeable":true});
 
+	// botó cerca banda
+	$('#searchButton').click(function() {
+		alert("buscant...");
+
+	});
+
   }); // end of document ready
 })(jQuery); // end of jQuery name space
 

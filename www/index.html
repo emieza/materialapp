@@ -6,7 +6,7 @@
   <title>Material App</title>
 
     <!-- cordova -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://fonts.gstatic.com https://code.jquery.com data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://fonts.gstatic.com https://code.jquery.com https://musicbrainz.org data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
     <meta name="format-detection" content="telephone=no">
     <meta name="msapplication-tap-highlight" content="no">
     <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
@@ -53,12 +53,20 @@
     <li class="tab col s3"><a href="#test-swipe-3">Test 3</a></li>
   </ul>
   <div id="test-swipe-1" class="page col s12 blue">
+    <div class="input-field">
+        <input type="text" placeholder="search..." name="searchText" id="searchText">
+    </div>
+    <div>
+        <a class="waves-effect waves-light btn" id="searchButton"><i class="material-icons left">search</i>Busca!</a>
+    </div>
+
       <div class="collection">
         <a href="#!" class="collection-item">Alvin</a>
         <a href="#!" class="collection-item active">Alvin</a>
         <a href="#!" class="collection-item">Alvin</a>
         <a href="#!" class="collection-item">Alvin</a>
       </div>
+
   </div>
   <div id="test-swipe-2" class="page col s12 red">Test 2</div>
   <div id="test-swipe-3" class="page col s12 green">Test 3</div>
