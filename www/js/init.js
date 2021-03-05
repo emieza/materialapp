@@ -22,18 +22,18 @@
 			// buidem llista
 			$(".collection").empty();
 			// omplim amb les dades de la API
-			for(var i in msg.artists) {
-				var artist = msg.artists[i];
+			for(let i in msg.artists) {
+				let artist = msg.artists[i];
 
-				var boto = $("<a href='#!' class='secondary-content'>\
+				let boto = $("<a href='#!' class='secondary-content'>\
 							<i class='material-icons'>text_snippet</i>\
 							</a>");
 				boto.click(function() {
 					// group ID
-					var gid = artist.id;
+					let gid = artist.id;
 					detallsGrup(gid);
 				});
-				var elem = $("\
+				let elem = $("\
 					<li class='collection-item avatar'>\
 						<img src='img/user.jpg' class='circle'>\
 						<span class='title'>"+artist.name+"</span>\
@@ -55,21 +55,23 @@
 
 
 function detallsGrup(grup_id) {
+	console.log("detallsGrup");
+
 	// mostrem detalls del grup a la pantalla 2
 	$.ajax({
 		method: "GET",
 		url: "https://musicbrainz.org/ws/2/artist/"+grup_id,
 		dataType: "json",   // necessitem això pq ens retorni un objecte JSON
 	}).done(function (msg) {
-		$("#detalls").text(JSON.stringify(msg)
+		$("#detalls").text(JSON.stringify(msg));
 	}).fail(function () {
 		alert("ERROR");
 	});
 
-	// canviem a la pantalla 2
-	//var tabs = document.getElementById("tabs-swipe-demo");
-	//var tabsInstance = M.Tabs.getInstance(tabs);
-	//tabsInstance.select("tabs2");
+	// canviem al tab 2
+	var tabs = document.getElementById("tabs-swipe-demo");
+	var tabsInstance = M.Tabs.getInstance(tabs);
+	tabsInstance.select("tab2");
 }
 
 
