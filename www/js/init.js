@@ -6,18 +6,31 @@
   	// init GUI
     $('.sidenav').sidenav();
 	  $('.fixed-action-btn').floatingActionButton();
-	  // els tabs necessiten ser swipeable
-	  //$('.tabs').tabs({"swipeable":true});
+	  $('.tabs').tabs({"swipeable":true});
 
-    var options = { "swipeable": true };
-    var el = document.getElementById('tabs-swipe-demo');
-    var tabsInstance = M.Tabs.init(el, options);
 
-    // make clicable an element of the list and go to the next tab
+    $('#downloadBtn').click( function() {
+        //alert("hola!");
 
-    $('.collection-item.active').click(function() {
-        tabsInstance.select("test-swipe-2");
+        $('#llista_principal').empty();
+
+        $.ajax({
+          method: "GET",
+          url: "https://api.spaceflightnewsapi.net/v3/articles?_limit=5",
+          dataType: "json",
+        }).done(function (msg) {
+
+          for(let item in msg) {
+            console.log(msg[item]);
+            // aquí caldría fer mes coses, of course...
+            // ...
+          };
+        }).fail(function () {
+          alert("ERROR");
+        });
+
     });
+
 
   }); // end of document ready
 })(jQuery); // end of jQuery name space
