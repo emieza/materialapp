@@ -18,12 +18,22 @@
           method: "GET",
           url: "https://api.spaceflightnewsapi.net/v3/articles?_limit=5",
           dataType: "json",
-        }).done(function (msg) {
+        }).done(function (data) {
 
-          for(let item in msg) {
-            console.log(msg[item]);
+          for(let item in data) {
+            console.log(data[item]["title"]);
             // aquí caldría fer mes coses, of course...
             // ...
+            let newElement = $("<a id='listelement' class='collection-item' href='#!'>"+data[item]["title"]+"</a>");
+            
+            $('a', newElement).click( function() {
+              console.log('lokesea')
+              let newh1 = $("<h1>"+data[item]["title"]+"</h1>");
+              
+              $('#test-swipe-2').append(newh1);
+            })
+
+            $('#llista_principal').append(newElement);
           };
         }).fail(function () {
           alert("ERROR");
