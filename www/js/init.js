@@ -16,7 +16,7 @@
 
         $.ajax({
           method: "GET",
-          url: "https://api.spaceflightnewsapi.net/v3/articles?_limit=5",
+          url: "https://api.spaceflightnewsapi.net/v3/articles?_limit=15",
           dataType: "json",
         }).done(function (data) {
 
@@ -26,11 +26,19 @@
             // ...
             let newElement = $("<a id='listelement' class='collection-item' href='#!'>"+data[item]["title"]+"</a>");
             
-            $('a', newElement).click( function() {
-              console.log('lokesea')
+            newElement.click( function() {
+              //Creacion de objetos graficos
               let newh1 = $("<h1>"+data[item]["title"]+"</h1>");
-              
+              let newsummary = $("<p>"+data[item]["summary"]+"</p>");
+              let newimage = $("<img src='"+data[item]["imageUrl"]+"'></img>");
+              //Vaciando el div de la pagina 2
+              $('#test-swipe-2').empty();
+              //Agregando objetos graficos a la pagina 2
               $('#test-swipe-2').append(newh1);
+              $('#test-swipe-2').append(newsummary);
+              $('#test-swipe-2').append(newimage);
+              //Saltamos a la pagina 2
+              $('.tabs').tabs("select", "test-swipe-2");
             })
 
             $('#llista_principal').append(newElement);
