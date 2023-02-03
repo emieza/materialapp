@@ -18,31 +18,33 @@
 </head>
 <body>
   <nav class="light-blue lighten-1" role="navigation">
-    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Material App</a>
+    <div class="nav-wrapper container">
+      <a id="logo-container" href="#" class="brand-logo">Material App</a>
       <ul class="right hide-on-med-and-down">
         <li><a href="#">Navbar Link</a></li>
       </ul>
-
-  <ul id="slide-out" class="sidenav">
-    <li><div class="user-view">
-      <div class="background">
-        <img src="img/mais3.jpg">
-      </div>
-      <a href="#user"><img class="circle" src="img/user.jpg"></a>
-      <a href="#name"><span class="white-text name">Henry Mais</span></a>
-      <a href="#email"><span class="white-text email">emieza@xtec.cat</span></a>
-    </div></li>
-    <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
-    <li><a href="#!">Second Link</a></li>
-    <li><div class="divider"></div></li>
-    <li><a class="subheader">Subheader</a></li>
-    <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
-  </ul>
-  <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-    
+      <ul id="slide-out" class="sidenav">
+        <li>
+          <div class="user-view">
+            <div class="background">
+              <img src="img/mais3.jpg">
+            </div>
+            <a href="#user"><img class="circle" src="img/user.jpg"></a>
+            <a href="#name"><span class="white-text name">Henry Mais</span></a>
+            <a href="#email"><span class="white-text email">emieza@xtec.cat</span></a>
+          </div>
+        </li>
+        <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
+        <li><a href="#!">Second Link</a></li>
+        <li><div class="divider"></div></li>
+        <li><a class="subheader">Subheader</a></li>
+        <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+      </ul>
+      <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    </div>
   </nav>
 
-
+  <!-- tabs -->
   <ul id="tabs-swipe-demo" class="tabs">
     <li class="tab col s3">
         <a class="active" href="#tab1">
@@ -52,7 +54,9 @@
     <li class="tab col s3"><a href="#tab2">Article</a></li>
     <li class="tab col s3"><a href="#tab3">Test 3</a></li>
   </ul>
-  <div id="tab1" class="page col s12">
+
+  <!-- pantalla 1 -->
+  <div id="tab1" class="page col s12 tabs-content">
     <div class="container">
       <div class="input-field">
           <input type="text" placeholder="search..." name="searchText" id="searchText">
@@ -60,10 +64,9 @@
       </div>
     </div>
 
-      <div class="collection">
-        <!-- a href="#!" class="collection-item">Alvin</a-->
-      </div>
-
+    <div class="collection tabs-content">
+      <!-- a href="#!" class="collection-item">Alvin</a-->
+    </div>
 
     <div class="fixed-action-btn">
       <a class="btn-floating btn-large red">
@@ -76,16 +79,18 @@
         <li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
       </ul>
     </div>
-      
 
   </div>
-  <div id="tab2" class="page col s12">
+
+  <!-- pantalla 2 -->
+  <div id="tab2" class="page col s12 tabs-content">
     <!-- contents -->
     <div class="container">
     </div>
   </div>
 
-  <div id="tab3" class="page col s12 green">
+  <!-- pantalla 3 -->
+  <div id="tab3" class="page col s12 green tabs-content">
     <!-- contents -->
     <div class="container">
     </div>
