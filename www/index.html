@@ -17,32 +17,34 @@
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
 <body>
+
   <nav class="light-blue lighten-1" role="navigation">
-    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Material App</a>
+    <div class="nav-wrapper container">
+      <a id="logo-container" href="#" class="brand-logo">Material App</a>
       <ul class="right hide-on-med-and-down">
         <li><a href="#">Navbar Link</a></li>
       </ul>
 
-  <ul id="slide-out" class="sidenav">
-    <li><div class="user-view">
-      <div class="background">
-        <img src="img/mais3.jpg">
-      </div>
-      <a href="#user"><img class="circle" src="img/user.jpg"></a>
-      <a href="#name"><span class="white-text name">Henry Mais</span></a>
-      <a href="#email"><span class="white-text email">emieza@xtec.cat</span></a>
-    </div></li>
-    <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
-    <li><a href="#!">Second Link</a></li>
-    <li><div class="divider"></div></li>
-    <li><a class="subheader">Subheader</a></li>
-    <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
-  </ul>
-  <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-    
+      <ul id="slide-out" class="sidenav">
+        <li><div class="user-view">
+          <div class="background">
+            <img src="img/mais3.jpg">
+          </div>
+          <a href="#user"><img class="circle" src="img/user.jpg"></a>
+          <a href="#name"><span class="white-text name">Henry Mais</span></a>
+          <a href="#email"><span class="white-text email">emieza@xtec.cat</span></a>
+        </div></li>
+        <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
+        <li><a href="#!">Second Link</a></li>
+        <li><div class="divider"></div></li>
+        <li><a class="subheader">Subheader</a></li>
+        <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+      </ul>
+      <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    </div>
   </nav>
 
-
+  <!-- tab buttons -->
   <ul id="tabs-swipe-demo" class="tabs">
     <li class="tab col s3">
         <a class="active" href="#test-swipe-1">
@@ -55,7 +57,8 @@
 
 
   <!-- page 1 -->
-  <div id="test-swipe-1" class="page col s12">
+  <div id="test-swipe-1" class="page col s12 tabs-content">
+
     <div class="container">
       <div class="input-field">
           <input type="text" placeholder="search..." name="searchText" id="searchText">
@@ -63,35 +66,36 @@
       </div>
     </div>
 
-      <div id="llista_principal" class="collection">
-        <a href="#!" class="collection-item">Alvin</a>
-        <a href="#!" class="collection-item active">Alvin</a>
-        <a href="#!" class="collection-item">Alvin</a>
-        <a href="#!" class="collection-item">Alvin</a>
-      </div>
-
-
-    <div class="fixed-action-btn">
-      <a class="btn-floating btn-large red">
-        <i class="large material-icons">mode_edit</i>
-      </a>
-      <ul>
-        <li><a class="btn-floating red"><i class="material-icons">insert_chart</i></a></li>
-        <li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
-        <li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
-        <li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
-      </ul>
+    <div id="llista_principal" class="collection">
+      <a href="#!" class="collection-item">Alvin</a>
+      <a href="#!" class="collection-item active">Alvin</a>
+      <a href="#!" class="collection-item">Alvin</a>
+      <a href="#!" class="collection-item">Alvin</a>
     </div>
   </div>
 
-  <div id="test-swipe-2" class="page col s12">
+  <!-- page 2 -->
+  <div id="test-swipe-2" class="page col s12 tabs-content">
     Test 2
   </div>
   
-  <div id="test-swipe-3" class="page col s12">
+  <!-- page 3 -->
+  <div id="test-swipe-3" class="page col s12 tabs-content">
     Test 3
   </div>
     
+  <!-- fixed action button -->
+  <div class="fixed-action-btn">
+    <a class="btn-floating btn-large red">
+      <i class="large material-icons">mode_edit</i>
+    </a>
+    <ul>
+      <li><a class="btn-floating red"><i class="material-icons">insert_chart</i></a></li>
+      <li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
+      <li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
+      <li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
+    </ul>
+  </div>
 
   <!--  Scripts-->
   <script src="cordova.js"></script>

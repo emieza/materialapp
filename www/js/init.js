@@ -28,7 +28,7 @@
             
             newElement.click( function() {
               //Creacion de objetos graficos
-              let newh1 = $("<h1>"+data[item]["title"]+"</h1>");
+              let newh1 = $("<h5>"+data[item]["title"]+"</h5>");
               let newsummary = $("<p>"+data[item]["summary"]+"</p>");
               let newimage = $("<img src='"+data[item]["imageUrl"]+"'></img>");
               //Vaciando el div de la pagina 2
