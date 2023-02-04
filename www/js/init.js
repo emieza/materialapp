@@ -69,5 +69,6 @@ function takePicture() {
 
 function cameraError(err) {
   alert("ERROR: "+err);
+  console.log(err);
 }
 
