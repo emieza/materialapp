@@ -29,3 +29,7 @@ html, body {
 .tabs-content {
 	height: 100%;
 }
+
+#myImage {
+	width: 100%;
+}

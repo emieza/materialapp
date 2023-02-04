@@ -17,7 +17,7 @@
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
 <body>
-  
+
   <nav class="light-blue lighten-1" role="navigation">
     <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Material App</a>
       <ul class="right hide-on-med-and-down">
@@ -46,13 +46,10 @@
 
   <!-- tabs -->
   <ul id="tabs-swipe-demo" class="tabs">
-    <li class="tab col s3">
-        <a class="active" href="#test-swipe-1">
-            <i class="material-icons">search</i>
-        </a>
+    <li class="tab col s3"><a class="active" href="#test-swipe-1"><i class="material-icons">home</i></a>
     </li>
-    <li class="tab col s3"><a href="#test-swipe-2">Test 2</a></li>
-    <li class="tab col s3"><a href="#test-swipe-3">Test 3</a></li>
+    <li class="tab col s3"><a href="#test-swipe-2"><i class="material-icons">photo_camera</i></a></li>
+    <li class="tab col s3"><a href="#test-swipe-3"><i class="material-icons">settings</i></a></li>
   </ul>
 
   <!-- pantalla 1 -->
@@ -75,7 +72,15 @@
   </div>
   
   <!-- pantalla 2 -->
-  <div id="test-swipe-2" class="page col s12 red tabs-content">Test 2</div>
+  <div id="test-swipe-2" class="page col s12 tabs-content">
+    <div class="container">
+      <br>
+      <a class="waves-effect waves-light btn" id="takePicture"><i class="material-icons left">photo_camera</i>Pren una foto</a>
+      <br><br>
+      <img id="myImage" />
+      <br>
+    </div>
+  </div>
 
   <!-- pantalla 3 -->
   <div id="test-swipe-3" class="page col s12 green tabs-content">Test 3</div>
